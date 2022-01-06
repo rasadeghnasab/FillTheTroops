@@ -1,0 +1,33 @@
+{
+  "name": "goodgame",
+  "version": "1.0.0",
+  "description": "Receive an input as the soldiers number and suggest how many soldier should each troop contains.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "jest --watchAll --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rasadeghnasab/FillTheTroops.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rasadeghnasab/FillTheTroops/issues"
+  },
+  "homepage": "https://github.com/rasadeghnasab/FillTheTroops#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "joi": "^17.5.0",
+    "lodash": "^4.17.21",
+    "winston": "^3.3.3"
+  }
+}
