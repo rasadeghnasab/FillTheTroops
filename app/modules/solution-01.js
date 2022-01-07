@@ -2,7 +2,7 @@ const utilities = require('./utilities');
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
 
-export default function generateArmy(armyCount) {
+module.exports = function generateArmy(armyCount) {
     const troopsCount = troopsTypes.length;
 
     if (armyCount < troopsCount) {
