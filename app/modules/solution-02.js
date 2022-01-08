@@ -2,7 +2,14 @@ const utilities = require('./utilities');
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
 
-export default function generateArmy(armyCount) {
+/**
+ * This solution has less entropy
+ * Time complexity: O(1) (That means if we grow input the execution time won't increase)
+ *
+ * @param armyCount
+ * @returns {*}
+ */
+module.exports = (armyCount) => {
     if (armyCount < troopsTypes.length) {
         throw new Error('Army members can not be less than troops count');
     }

@@ -2,7 +2,14 @@ const utilities = require('./utilities');
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
 
-module.exports = function generateArmy(armyCount) {
+/**
+ * This solution has more entropy
+ * Time complexity: O(n)
+ *
+ * @param armyCount
+ * @returns Object
+ */
+module.exports = (armyCount) => {
     const troopsCount = troopsTypes.length;
 
     if (armyCount < troopsCount) {
