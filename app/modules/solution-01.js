@@ -1,22 +1,42 @@
-const utilities = require('./utilities');
+const _ = require('lodash');
+const inputValidationException = require('../http/exceptions/inputValidationException');
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
 
-export default function generateArmy(armyCount) {
+/**
+ * Accepts armyCount and validate it against some conditions
+ * @param armyCount
+ */
+function validateInput(armyCount) {
+    if (armyCount != parseInt(armyCount)) {
+        throw new inputValidationException('armyCount should be an integer');
+    }
+
+    if (armyCount < 1) {
+        throw new inputValidationException('armyCount should be greater than zero');
+    }
+
+    if (armyCount < troopsTypes.length) {
+        throw new inputValidationException('Army members can not be less than troops types');
+    }
+}
+
+/**
+ * This solution has more entropy
+ * Time complexity: O(n)
+ *
+ * @param armyCount
+ * @returns Object
+ */
+module.exports = (armyCount) => {
     const troopsCount = troopsTypes.length;
 
-    if (armyCount < troopsCount) {
-        throw new Error('Army members can not be less than troops types.');
-    }
+    validateInput(armyCount);
 
     // fill all the troops with 1
-    const army = Object.assign.apply({}, troopsTypes.map((troopType) => ({ [troopType]: 1 })))
+    const army = Object.assign.apply({}, troopsTypes.map((troopType) => ({[troopType]: 1})))
 
-    if (armyCount === troopsCount) {
-        return army;
-    }
-
-    const shuffledTroopsTypes = utilities.shuffle(troopsTypes);
+    const shuffledTroopsTypes = _.shuffle(troopsTypes);
     const lastTroop = shuffledTroopsTypes.pop();
     let remains = armyCount - troopsCount;
 
@@ -25,7 +45,7 @@ export default function generateArmy(armyCount) {
             break;
         }
 
-        const troopCount = utilities.randomIntInRange(1, remains);
+        const troopCount = _.random(1, remains);
 
         army[troopType] += troopCount;
         remains -= troopCount;

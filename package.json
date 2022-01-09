@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "test": "jest --watchAll --coverage"
+    "test": "jest --forceExit --detectOpenHandles  --watchAll --maxWorkers=1 --coverage"
   },
   "repository": {
     "type": "git",
