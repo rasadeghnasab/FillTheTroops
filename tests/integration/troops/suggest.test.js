@@ -31,7 +31,7 @@ describe("/api/troops/suggest", () => {
         });
     });
     describe("unique result", () => {
-        const rounds = 200;
+        const rounds = 100;
         const expectedArmyCount = 5000;
         it(`result should be unique each time for same input in ${rounds} rounds`, async () => {
             const results = [];

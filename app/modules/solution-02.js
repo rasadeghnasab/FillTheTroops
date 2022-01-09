@@ -1,4 +1,4 @@
-const utilities = require('./utilities');
+const _ = require('lodash');
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
 
@@ -16,7 +16,7 @@ module.exports = (armyCount) => {
 
     // Create an array of size troops types length where
     // every troop has at least one member
-    let army = (new Array(troopsTypes.length)).fill(1);
+    let army = _.fill(new Array(troopsTypes.length), 1);
 
     for (let i = 0; i < armyCount - troopsTypes.length; i++) {
         const randomIndex = Math.floor((Math.random() * armyCount)) % troopsTypes.length;
@@ -25,5 +25,5 @@ module.exports = (armyCount) => {
         army[randomIndex]++;
     }
 
-    return utilities.createObjectFromTwoArrays(utilities.shuffle(troopsTypes), army);
+    return _.zipObject(_.shuffle(troopsTypes), army);
 }

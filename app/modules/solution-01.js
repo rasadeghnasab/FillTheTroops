@@ -1,4 +1,4 @@
-const utilities = require('./utilities');
+const _ = require('lodash');
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
 
@@ -23,7 +23,7 @@ module.exports = (armyCount) => {
         return army;
     }
 
-    const shuffledTroopsTypes = utilities.shuffle(troopsTypes);
+    const shuffledTroopsTypes = _.shuffle(troopsTypes);
     const lastTroop = shuffledTroopsTypes.pop();
     let remains = armyCount - troopsCount;
 
@@ -32,7 +32,7 @@ module.exports = (armyCount) => {
             break;
         }
 
-        const troopCount = utilities.randomIntInRange(1, remains);
+        const troopCount = _.random(1, remains);
 
         army[troopType] += troopCount;
         remains -= troopCount;
