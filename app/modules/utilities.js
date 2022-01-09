@@ -40,4 +40,3 @@ exports.shuffle = function(array) {
 exports.createObjectFromTwoArrays = function(keys, values) {
     return Object.assign.apply({}, keys.map((value, index) => ({ [value]: values[index] })));
 }
-

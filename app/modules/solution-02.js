@@ -27,4 +27,3 @@ module.exports = (armyCount) => {
 
     return utilities.createObjectFromTwoArrays(utilities.shuffle(troopsTypes), army);
 }
-
