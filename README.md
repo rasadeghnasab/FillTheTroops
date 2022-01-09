@@ -3,7 +3,7 @@
     - [x] Add Express
     - [x] Add tests
     - [x] Add solutions + tests
-    - [ ] Add unit tests
+    - [x] Add unit tests
     - [ ] Move troops types and troop minimum members to config
 - [ ] Add frontend side
 - [ ] Add Docker. build and deployment setup

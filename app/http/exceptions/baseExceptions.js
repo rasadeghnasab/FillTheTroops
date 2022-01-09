@@ -5,14 +5,11 @@ class applicationError extends Error {
         message = message === '' ? 'Unexpected error happened' : message;
         super(message);
 
+        this.name = this.constructor.name;
         Object.assign({statusCode: 400}, options);
         if (Object.keys(options).length) {
             this.assignOptions(options);
         }
-    }
-
-    name() {
-        return this.constructor.name;
     }
 
     assignOptions(options) {
@@ -22,10 +19,10 @@ class applicationError extends Error {
     }
 }
 
-class httpExceptions extends applicationError {
+class httpErrors extends applicationError {
 }
 
 module.exports = {
     applicationError,
-    httpExceptions
+    httpErrors
 }

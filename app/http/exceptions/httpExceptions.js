@@ -1,25 +1,32 @@
-const {httpExceptions} = require("./baseExceptions");
+const {httpErrors} = require("./baseExceptions");
 
-class customHttpException extends httpExceptions {
+class customHttpError extends httpErrors {
     constructor(message, options = {}) {
         super(message, options);
     }
 }
 
-class badRequestError extends httpExceptions {
+class httpInputValidationError extends httpErrors {
+    constructor(message, options = {}) {
+        super(message, Object.assign({statusCode: 422}, options));
+    }
+}
+
+class httpBadRequestError extends httpErrors {
     constructor(message, options = {}) {
         super(message, Object.assign({statusCode: 400}, options));
     }
 }
 
-class notFoundError extends httpExceptions {
+class httpNotFoundError extends httpErrors {
     constructor(message, options = {}) {
         super(message, Object.assign({statusCode: 404}, options));
     }
 }
 
 module.exports = {
-    customHttpException,
-    badRequestError,
-    notFoundError
+    customHttpError,
+    httpInputValidationError,
+    httpBadRequestError,
+    httpNotFoundError
 }

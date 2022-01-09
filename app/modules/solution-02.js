@@ -1,6 +1,25 @@
 const _ = require('lodash');
+const inputValidationException = require("../http/exceptions/inputValidationException");
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
+
+/**
+ * Accepts armyCount and validate it against some conditions
+ * @param armyCount
+ */
+function validateInput(armyCount) {
+    if (armyCount != parseInt(armyCount)) {
+        throw new inputValidationException('armyCount should be an integer');
+    }
+
+    if (armyCount < 1) {
+        throw new inputValidationException('armyCount should be greater than zero');
+    }
+
+    if (armyCount < troopsTypes.length) {
+        throw new inputValidationException('Army members can not be less than troops types');
+    }
+}
 
 /**
  * This solution has less entropy
@@ -10,9 +29,7 @@ const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
  * @returns {*}
  */
 module.exports = (armyCount) => {
-    if (armyCount < troopsTypes.length) {
-        throw new Error('Army members can not be less than troops count');
-    }
+    validateInput(armyCount);
 
     // Create an array of size troops types length where
     // every troop has at least one member

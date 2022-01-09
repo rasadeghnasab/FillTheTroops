@@ -1,5 +1,5 @@
-const {notFoundError} = require("../exceptions/httpExceptions");
+const {httpNotFoundError} = require("../exceptions/httpExceptions");
 
 module.exports = (request, response, next) => {
-    return next(new notFoundError('Route does not found'));
+    return next(new httpNotFoundError('Route does not exist'));
 };
