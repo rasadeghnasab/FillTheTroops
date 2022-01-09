@@ -4,19 +4,19 @@ const inputValidationException = require('../http/exceptions/inputValidationExce
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
 
 /**
- * Accepts armyCount and validate it against some conditions
- * @param armyCount
+ * Accepts soldiersCount and validate it against some conditions
+ * @param soldiersCount
  */
-function validateInput(armyCount) {
-    if (armyCount != parseInt(armyCount)) {
-        throw new inputValidationException('armyCount should be an integer');
+function validateInput(soldiersCount) {
+    if (soldiersCount != parseInt(soldiersCount)) {
+        throw new inputValidationException('soldiersCount should be an integer');
     }
 
-    if (armyCount < 1) {
-        throw new inputValidationException('armyCount should be greater than zero');
+    if (soldiersCount < 1) {
+        throw new inputValidationException('soldiersCount should be greater than zero');
     }
 
-    if (armyCount < troopsTypes.length) {
+    if (soldiersCount < troopsTypes.length) {
         throw new inputValidationException('Army members can not be less than troops types');
     }
 }
@@ -25,20 +25,20 @@ function validateInput(armyCount) {
  * This solution has more entropy
  * Time complexity: O(n)
  *
- * @param armyCount
+ * @param soldiersCount
  * @returns Object
  */
-module.exports = (armyCount) => {
+module.exports = (soldiersCount) => {
     const troopsCount = troopsTypes.length;
 
-    validateInput(armyCount);
+    validateInput(soldiersCount);
 
     // fill all the troops with 1
     const army = Object.assign.apply({}, troopsTypes.map((troopType) => ({[troopType]: 1})))
 
     const shuffledTroopsTypes = _.shuffle(troopsTypes);
     const lastTroop = shuffledTroopsTypes.pop();
-    let remains = armyCount - troopsCount;
+    let remains = soldiersCount - troopsCount;
 
     for (const troopType of shuffledTroopsTypes) {
         if (remains <= 0) {

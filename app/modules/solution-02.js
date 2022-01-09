@@ -4,19 +4,19 @@ const inputValidationException = require("../http/exceptions/inputValidationExce
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
 
 /**
- * Accepts armyCount and validate it against some conditions
- * @param armyCount
+ * Accepts soldiersCount and validate it against some conditions
+ * @param soldiersCount
  */
-function validateInput(armyCount) {
-    if (armyCount != parseInt(armyCount)) {
-        throw new inputValidationException('armyCount should be an integer');
+function validateInput(soldiersCount) {
+    if (soldiersCount != parseInt(soldiersCount)) {
+        throw new inputValidationException('soldiersCount should be an integer');
     }
 
-    if (armyCount < 1) {
-        throw new inputValidationException('armyCount should be greater than zero');
+    if (soldiersCount < 1) {
+        throw new inputValidationException('soldiersCount should be greater than zero');
     }
 
-    if (armyCount < troopsTypes.length) {
+    if (soldiersCount < troopsTypes.length) {
         throw new inputValidationException('Army members can not be less than troops types');
     }
 }
@@ -25,18 +25,18 @@ function validateInput(armyCount) {
  * This solution has less entropy
  * Time complexity: O(1) (That means if we grow input the execution time won't increase)
  *
- * @param armyCount
+ * @param soldiersCount
  * @returns {*}
  */
-module.exports = (armyCount) => {
-    validateInput(armyCount);
+module.exports = (soldiersCount) => {
+    validateInput(soldiersCount);
 
     // Create an array of size troops types length where
     // every troop has at least one member
     let army = _.fill(new Array(troopsTypes.length), 1);
 
-    for (let i = 0; i < armyCount - troopsTypes.length; i++) {
-        const randomIndex = Math.floor((Math.random() * armyCount)) % troopsTypes.length;
+    for (let i = 0; i < soldiersCount - troopsTypes.length; i++) {
+        const randomIndex = Math.floor((Math.random() * soldiersCount)) % troopsTypes.length;
 
         // Increment any random troop by 1
         army[randomIndex]++;

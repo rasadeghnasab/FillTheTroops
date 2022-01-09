@@ -17,10 +17,10 @@
 
 ## Usage
 
-After you run the server you can call the url below with `armyCount` and `solution` parameters:
+After you run the server you can call the url below with `soldiersCount` and `solution` parameters:
 
 ```
-http://localhost:8000/api/troops/suggest?armyCount=300
+http://localhost:8000/api/troops/suggest?soldiersCount=300
 ```
 
 ## Compare solutions:
