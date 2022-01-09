@@ -4,7 +4,7 @@
     - [x] Add tests
     - [x] Add solutions + tests
     - [x] Add unit tests
-    - [ ] Move troops types and troop minimum members to config
+    - [ ] Move troops types and troops minimum members to config
 - [ ] Add frontend side
 - [ ] Add Docker. build and deployment setup
 - [ ] Complete the README file.
@@ -15,12 +15,22 @@
 - [ ] Turn front-end validation on-off
 - [ ] Add 3D graphics if possible
 
+## Usage
+
+After you run the server you can call the url below with `armyCount` and `solution` parameters:
+
+```
+http://localhost:8000/api/troops/suggest?armyCount=300
+```
+
 ## Compare solutions:
 
 | Feature         | Solution-1 | Solution-2 |
 |-----------------|------------|------------|
 | Time complexity | O(1)       | O(n)       |
 | Entropy         | High       | Low        |
+
+## Output time profiling
 
 ### solution-1:
 
@@ -33,7 +43,6 @@
 | 500000000       | 0.03ms  | 500,000,000         |
 | 500000000000    | 0.036ms | 500,000,000,000     |
 | 500000000000000 | 0.023ms | 500,000,000,000,000 |
-
 
 ### solution-2:
 
