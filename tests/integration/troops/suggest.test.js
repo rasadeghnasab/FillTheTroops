@@ -37,12 +37,12 @@ describe("/api/troops/suggest", () => {
         });
         describe("unique result", () => {
             const rounds = 100;
-            const expectedsoldiersCount = 5000;
+            const expectedSoldiersCount = 5000000;
             it(`result should be unique each time for same input in ${rounds} rounds`, async () => {
                 const results = [];
                 for (let round = 0; round < rounds; round++) {
                     const response = await request(server).get("/api/troops/suggest").query({
-                        soldiersCount: expectedsoldiersCount,
+                        soldiersCount: expectedSoldiersCount,
                         solution
                     });
                     results.push(JSON.stringify(response.body));
