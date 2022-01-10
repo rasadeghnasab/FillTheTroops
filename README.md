@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/rasadeghnasab/FillTheTroops.svg?style=svg)](https://circleci.com/gh/rasadeghnasab/FillTheTroops)
+# Tests: [![CircleCI](https://circleci.com/gh/rasadeghnasab/FillTheTroops.svg?style=svg)](https://circleci.com/gh/rasadeghnasab/FillTheTroops)
 
 ## Usage
 
