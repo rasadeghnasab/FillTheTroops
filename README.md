@@ -1,19 +1,3 @@
-### Todos
-- [ ] Add nodejs
-    - [x] Add Koa + tests
-    - [x] Add solutions + tests
-    - [x] Add utilities + unit tests
-    - [ ] Move troops types and troops minimum members to config
-- [ ] Add frontend side
-- [ ] Add Docker. build and deployment setup
-- [ ] Complete the README file.
-
-### Features
-- [x] Switch between solutions in backend
-- [ ] Switch between solutions in frontend
-- [ ] Turn front-end validation on-off
-- [ ] Add 3D graphics if possible
-
 ## Usage
 
 After you run the server you can call the url below with `soldiersCount` and `solution` parameters:
@@ -53,3 +37,13 @@ http://localhost:8000/api/troops/suggest?soldiersCount=300
 | 500000     | 15.058ms     |                                                                |
 | 500000000: | 1:02.720     | (m:ss.mmm) (500,000,000)                                       |
 | 500000000  | > 10 Minutes | pending for more than 10 minutes so I terminated the execution |
+
+### Todos
+- [ ] Add nodejs
+    - [x] Add Koa + tests
+    - [x] Add solutions + tests
+    - [x] Add utilities + unit tests
+    - [ ] Move troops types and troops minimum members to config
+- [ ] Add Docker. build and deployment setup
+- [ ] Complete the README file.
+    - [ ] Add Postman public link to the README file
