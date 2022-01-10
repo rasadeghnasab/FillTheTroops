@@ -1,16 +1,18 @@
 const inputValidationException = require("../exceptions/inputValidationException");
 const {httpInputValidationError} = require('../exceptions/httpExceptions');
 
-exports.suggest_troops = async function (request, response) {
-    const soldiersCount = request.query.soldiersCount;
-    const chosenSolution = parseInt(request.query.solution);
+exports.suggest_troops = async function (ctx) {
+    const soldiersCount = ctx.request.query.soldiersCount;
+    let chosenSolution = parseInt(ctx.request.query.solution);
+    chosenSolution = chosenSolution === 2 ? chosenSolution : 1;
 
-    const solution = chosenSolution === 2 ? require('../../modules/solution-02') : require('../../modules/solution-01');
+    const solution = require(`../../modules/solution-0${chosenSolution}`);
 
     try {
-        return response.status(200).send(solution(soldiersCount));
+        ctx.status = 200;
+        ctx.body = solution(soldiersCount);
     } catch (error) {
-        if(error instanceof inputValidationException) {
+        if (error instanceof inputValidationException) {
             throw new httpInputValidationError(error.message);
         }
 

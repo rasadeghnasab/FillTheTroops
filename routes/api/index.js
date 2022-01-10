@@ -1,6 +1,8 @@
-const express = require("express");
-const router = express.Router();
+const Router = require('@koa/router');
+const apiRoutes = new Router();
 
-router.use("/troops/", require("./troops"));
+const troopsRoutes = require('./troops');
 
-module.exports = router;
+apiRoutes.use("troops/", troopsRoutes.routes(), troopsRoutes.allowedMethods());
+
+module.exports = apiRoutes;

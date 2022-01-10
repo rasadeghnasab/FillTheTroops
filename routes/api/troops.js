@@ -1,8 +1,8 @@
-const express = require("express");
-const router = express.Router();
-const exceptionCatcher = require('../exceptionCatcher');
+const Router = require('@koa/router');
+const troopsRoutes = new Router();
+
 const troopController = require('../../app/http/controllers/troopController')
 
-router.get("/suggest", exceptionCatcher(troopController.suggest_troops));
+troopsRoutes.get("suggest", troopController.suggest_troops);
 
-module.exports = router;
+module.exports = troopsRoutes;
