@@ -24,20 +24,20 @@ describe("/api/troops/suggest", () => {
             it("the army members count should be equal to the entered input number", async () => {
                 const soldiersCounts = [3, 50, 100, 167, 200, 1000, 1000000];
 
-                for (const expectedsoldiersCount of soldiersCounts) {
+                for (const expectedSoldiersCount of soldiersCounts) {
                     const response = await request(server).get("/api/troops/suggest").query({
-                        soldiersCount: expectedsoldiersCount,
+                        soldiersCount: expectedSoldiersCount,
                         solution
                     });
-                    const actualsoldiersCount = Object.values(response.body).reduce((a, b) => a + b, 0)
+                    const actualSoldiersCount = Object.values(response.body).reduce((a, b) => a + b, 0)
 
-                    expect(expectedsoldiersCount).toEqual(actualsoldiersCount);
+                    expect(expectedSoldiersCount).toEqual(actualSoldiersCount);
                 }
             });
         });
         describe("unique result", () => {
-            const rounds = 100;
-            const expectedSoldiersCount = 5000000;
+            const rounds = solution === 1 ? 100 : 20;
+            const expectedSoldiersCount = 5000;
             it(`result should be unique each time for same input in ${rounds} rounds`, async () => {
                 const results = [];
                 for (let round = 0; round < rounds; round++) {
