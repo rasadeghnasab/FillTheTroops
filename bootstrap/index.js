@@ -1,6 +1,6 @@
 module.exports = (app) => {
-  require("./logging");
-  require("./routes")(app);
+    require("./logging");
+    require("./routes")(app);
 
-  return require("./server")(app);
+    return require("./server")(app);
 };

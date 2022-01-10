@@ -7,8 +7,8 @@
  * @param {int} max
  * @returns {integer}
  */
-exports.random = function(min, max) {
-    if(min > max) {
+exports.random = function (min, max) {
+    if (min > max) {
         const temp = min;
         min = max;
         max = temp;
@@ -23,7 +23,7 @@ exports.random = function(min, max) {
  * @param {array} array
  * @returns
  */
-exports.shuffle = function(array) {
+exports.shuffle = function (array) {
     return array
         .map(element => [Math.random(), element])
         .sort((a, b) => a[0] - b[0])
@@ -37,6 +37,6 @@ exports.shuffle = function(array) {
  * @param values
  * @returns {Object}
  */
-exports.createObjectFromTwoArrays = function(keys, values) {
-    return Object.assign.apply({}, keys.map((value, index) => ({ [value]: values[index] })));
+exports.createObjectFromTwoArrays = function (keys, values) {
+    return Object.assign.apply({}, keys.map((value, index) => ({[value]: values[index]})));
 }
