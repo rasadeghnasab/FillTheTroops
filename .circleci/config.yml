@@ -11,7 +11,7 @@ jobs:
           command: |
             npm install
       - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "package.txt" }}
+          key: deps1-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - "npm"
       - run:
