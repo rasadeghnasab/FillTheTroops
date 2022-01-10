@@ -15,7 +15,7 @@ module.exports = (() => {
 
   winston.add(new winston.transports.File({ filename: "logs/errors.log" }));
 
-  if (!_.includes(["test", "production"], process.env.NODE_ENV)) {
+  if (!["test", "production"].includes(process.env.NODE_ENV)) {
     winston.add(
       new winston.transports.Console({
         format: winston.format.colorize(),

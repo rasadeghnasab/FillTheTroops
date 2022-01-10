@@ -1,4 +1,4 @@
-const _ = require('lodash');
+const utilities = require('./utilities');
 const inputValidationException = require('../http/exceptions/inputValidationException');
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
@@ -36,7 +36,7 @@ module.exports = (soldiersCount) => {
     // fill all the troops with 1
     const army = Object.assign.apply({}, troopsTypes.map((troopType) => ({[troopType]: 1})))
 
-    const shuffledTroopsTypes = _.shuffle(troopsTypes);
+    const shuffledTroopsTypes = utilities.shuffle(troopsTypes);
     const lastTroop = shuffledTroopsTypes.pop();
     let remains = soldiersCount - troopsCount;
 
@@ -45,7 +45,7 @@ module.exports = (soldiersCount) => {
             break;
         }
 
-        const troopCount = _.random(1, remains);
+        const troopCount = utilities.random(1, remains);
 
         army[troopType] += troopCount;
         remains -= troopCount;

@@ -1,4 +1,4 @@
-const _ = require('lodash');
+const utilities = require('./utilities');
 const inputValidationException = require("../http/exceptions/inputValidationException");
 
 const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
@@ -33,7 +33,7 @@ module.exports = (soldiersCount) => {
 
     // Create an array of size troops types length where
     // every troop has at least one member
-    let army = _.fill(new Array(troopsTypes.length), 1);
+    let army = (new Array(troopsTypes.length)).fill(1);
 
     for (let i = 0; i < soldiersCount - troopsTypes.length; i++) {
         const randomIndex = Math.floor((Math.random() * soldiersCount)) % troopsTypes.length;
@@ -42,5 +42,5 @@ module.exports = (soldiersCount) => {
         army[randomIndex]++;
     }
 
-    return _.zipObject(_.shuffle(troopsTypes), army);
+    return utilities.createObjectFromTwoArrays(utilities.shuffle(troopsTypes), army);
 }
