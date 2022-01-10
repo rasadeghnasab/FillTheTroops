@@ -1,9 +1,8 @@
 ### Todos
 - [ ] Add nodejs
-    - [x] Add Express
-    - [x] Add tests
+    - [x] Add Koa + tests
     - [x] Add solutions + tests
-    - [x] Add unit tests
+    - [x] Add utilities + unit tests
     - [ ] Move troops types and troops minimum members to config
 - [ ] Add frontend side
 - [ ] Add Docker. build and deployment setup
