@@ -1,5 +1,5 @@
 const {httpNotFoundError} = require("../exceptions/httpExceptions");
 
-module.exports = (request, response, next) => {
-    return next(new httpNotFoundError('Route does not exist'));
+module.exports = async (ctx) => {
+    ctx.throw(new httpNotFoundError('Route does not exist'));
 };

@@ -1,4 +1,6 @@
-const app = require("express")();
+const Koa = require('koa');
+const app = new Koa();
+
 
 const server = require("./bootstrap")(app);
 

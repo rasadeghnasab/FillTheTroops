@@ -1,7 +1,17 @@
 const winston = require("winston");
 
-module.exports = (error, request, response, next) => {
-    winston.error("=>", error);
+module.exports = async (ctx, next) => {
+    try {
+        await next();
+    } catch (error) {
+        winston.error("=>", error);
 
-    return response.status(error.statusCode ?? 500).send({message: error.message, statusCode: error.statusCode ?? 500});
+        const status = error.statusCode || error.status || 500;
+
+        ctx.status = status;
+        ctx.body = {
+            message: error.message,
+            statusCode: status
+        };
+    }
 };
