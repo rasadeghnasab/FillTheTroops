@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/rasadeghnasab/FillTheTroops.svg?style=svg)](https://circleci.com/gh/rasadeghnasab/FillTheTroops)
+
 ## Usage
 
 After you run the server you can call the url below with `soldiersCount` and `solution` parameters:
