@@ -18,6 +18,3 @@ jobs:
           name: Running tests
           command: |
             npm run test
-      - store_artifacts:
-          path: test-reports/
-          destination: troops_app
