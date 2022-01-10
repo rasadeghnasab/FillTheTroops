@@ -1,5 +1,4 @@
 const winston = require("winston");
-const _ = require("lodash");
 
 module.exports = (() => {
   winston.exceptions.handle(
