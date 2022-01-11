@@ -1,4 +1,20 @@
-# Tests: [![CircleCI](https://circleci.com/gh/rasadeghnasab/FillTheTroops.svg?style=svg)](https://circleci.com/gh/rasadeghnasab/FillTheTroops)
+## Tests: [![CircleCI](https://circleci.com/gh/rasadeghnasab/FillTheTroops.svg?style=svg)](https://circleci.com/gh/rasadeghnasab/FillTheTroops)
+
+## Up and running:
+
+### Method 01:
+
+- Run the command below and let it to finishes the job:
+
+```sh
+docker run --name goodgame-nodejs -p 80:8000 -d rasadeghnasab/goodgame-nodejs
+```
+
+- Now you're open the browser in this URL:
+
+```
+http://localhost:8000/api/troops/suggest?soldiersCount=300
+```
 
 ## Usage
 
@@ -11,7 +27,7 @@ http://localhost:8000/api/troops/suggest?soldiersCount=300
 ## Compare solutions:
 
 | Feature         | Solution-1 | Solution-2 |
-|-----------------|------------|------------|
+| --------------- | ---------- | ---------- |
 | Time complexity | O(1)       | O(n)       |
 | Entropy         | High       | Low        |
 
@@ -20,7 +36,7 @@ http://localhost:8000/api/troops/suggest?soldiersCount=300
 ### solution-1:
 
 | Input           | Time    | Extra               |
-|-----------------|---------|---------------------|
+| --------------- | ------- | ------------------- |
 | 500             | 0.051ms |                     |
 | 5000            | 0.028ms |                     |
 | 50000           | 0.021ms |                     |
@@ -32,7 +48,7 @@ http://localhost:8000/api/troops/suggest?soldiersCount=300
 ### solution-2:
 
 | Input      | Time         |                                                                |
-|------------|--------------|----------------------------------------------------------------|
+| ---------- | ------------ | -------------------------------------------------------------- |
 | 500        | 0.119ms      |                                                                |
 | 5000       | 2.491ms      |                                                                |
 | 50000      | 2.064ms      |                                                                |
