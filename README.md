@@ -37,13 +37,9 @@ npm run prod
 ### Close and clear:
 Simply return to your terminal and press `ctrl+c` to terminate the process
 
-## Usage
+## API documentation
 
-After you run the server you can call the url below with `soldiersCount` and `solution` parameters:
-
-```
-http://localhost:8000/api/troops/suggest?soldiersCount=300
-```
+You can find the documentation here: https://documenter.getpostman.com/view/844555/UVXgMxWT
 
 ## Compare solutions:
 
