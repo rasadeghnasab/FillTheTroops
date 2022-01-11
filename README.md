@@ -1,8 +1,8 @@
 ## Tests: [![CircleCI](https://circleci.com/gh/rasadeghnasab/FillTheTroops.svg?style=svg)](https://circleci.com/gh/rasadeghnasab/FillTheTroops)
 
-## Up and running:
+# Up and running:
 
-### Method 01:
+## Method 01:
 
 - Run the command below and let it to finishes the job:
 
@@ -10,22 +10,25 @@
 docker run --name fillTheTroops -p 8000:8000 -d rasadeghnasab/goodgame-nodejs
 ```
 
-#### Close and clear:
+- Now you're open the browser in this URL:
+
+### Close and clear:
 ```sh
 docker stop fillTheTroops
+docker rm fillTheTroops
 docker rmi rasadeghnasab/goodgame-nodejs
 ```
 
-- Now you're open the browser in this URL:
+## Method 02:
 
-### Method 02:
+Note: you need to have npm and node installed to use this method.
 
 ```
 npm install
 npm run prod
 ```
 
-#### Close and clear:
+### Close and clear:
 Simply return to your terminal and press `ctrl+c` to terminate the process
 
 ## Usage
@@ -67,13 +70,3 @@ http://localhost:8000/api/troops/suggest?soldiersCount=300
 | 500000     | 15.058ms     |                                                                |
 | 500000000: | 1:02.720     | (m:ss.mmm) (500,000,000)                                       |
 | 500000000  | > 10 Minutes | pending for more than 10 minutes so I terminated the execution |
-
-### Todos
-- [ ] Add nodejs
-    - [x] Add Koa + tests
-    - [x] Add solutions + tests
-    - [x] Add utilities + unit tests
-    - [ ] Move troops types and troops minimum members to config
-- [ ] Add Docker. build and deployment setup
-- [ ] Complete the README file.
-    - [ ] Add Postman public link to the README file
