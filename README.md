@@ -4,6 +4,8 @@
 
 ```sh
 git clone git@github.com:rasadeghnasab/FillTheTroops.git
+
+cd FillTheTroops
 ```
 
 ## Method 01:
