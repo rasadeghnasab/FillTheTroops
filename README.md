@@ -2,6 +2,10 @@
 
 # Up and running:
 
+```sh
+git clone git@github.com:rasadeghnasab/FillTheTroops.git
+```
+
 ## Method 01:
 
 - Run the command below and let it to finishes the job:
