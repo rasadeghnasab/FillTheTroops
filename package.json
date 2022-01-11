@@ -4,6 +4,7 @@
   "description": "Receive an input as the soldiers number and suggest how many soldier should each troop contains.",
   "main": "index.js",
   "scripts": {
+    "prod": "node index.js",
     "dev": "nodemon index.js",
     "test": "jest --forceExit --detectOpenHandles  --maxWorkers=1",
     "test:watch": "jest --forceExit --detectOpenHandles  --maxWorkers=1 --watch-all --coverage",
