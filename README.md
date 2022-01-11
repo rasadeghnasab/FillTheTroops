@@ -7,14 +7,26 @@
 - Run the command below and let it to finishes the job:
 
 ```sh
-docker run --name goodgame-nodejs -p 80:8000 -d rasadeghnasab/goodgame-nodejs
+docker run --name fillTheTroops -p 8000:8000 -d rasadeghnasab/goodgame-nodejs
+```
+
+#### Close and clear:
+```sh
+docker stop fillTheTroops
+docker rmi rasadeghnasab/goodgame-nodejs
 ```
 
 - Now you're open the browser in this URL:
 
+### Method 02:
+
 ```
-http://localhost:8000/api/troops/suggest?soldiersCount=300
+npm install
+npm run prod
 ```
+
+#### Close and clear:
+Simply return to your terminal and press `ctrl+c` to terminate the process
 
 ## Usage
 
