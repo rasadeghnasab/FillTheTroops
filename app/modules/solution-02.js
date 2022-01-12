@@ -1,13 +1,12 @@
 const utilities = require('./utilities');
 const inputValidationException = require("../http/exceptions/inputValidationException");
 
-const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
-
 /**
  * Accepts soldiersCount and validate it against some conditions
  * @param soldiersCount
+ * @param troopsTypes
  */
-function validateInput(soldiersCount) {
+function validateInput(soldiersCount, troopsTypes) {
     if (soldiersCount != parseInt(soldiersCount)) {
         throw new inputValidationException('soldiersCount should be an integer');
     }
@@ -26,10 +25,11 @@ function validateInput(soldiersCount) {
  * Time complexity: O(1) (That means if we grow input the execution time won't increase)
  *
  * @param soldiersCount
+ * @param troopsTypes
  * @returns {*}
  */
-module.exports = (soldiersCount) => {
-    validateInput(soldiersCount);
+module.exports = (soldiersCount, troopsTypes) => {
+    validateInput(soldiersCount, troopsTypes);
 
     // Create an array of size troops types length where
     // every troop has at least one member
