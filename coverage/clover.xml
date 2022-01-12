@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1641995057366" clover="3.2.0">
+  <project timestamp="1641995057367" name="All files">
+    <metrics statements="158" coveredstatements="153" conditionals="39" coveredconditionals="35" methods="32" coveredmethods="29" elements="229" coveredelements="217" complexity="0" loc="158" ncloc="158" packages="9" files="20" classes="20"/>
+    <package name="goodgame">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="D:\projects\goodgame\index.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="goodgame.app.http.controllers">
+      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="troopController.js" path="D:\projects\goodgame\app\http\controllers\troopController.js">
+        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="150" type="stmt"/>
+        <line num="6" count="150" type="stmt"/>
+        <line num="7" count="150" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="150" type="stmt"/>
+        <line num="11" count="150" type="stmt"/>
+        <line num="12" count="150" type="stmt"/>
+        <line num="13" count="150" type="stmt"/>
+        <line num="17" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="goodgame.app.http.exceptions">
+      <metrics statements="18" coveredstatements="16" conditionals="9" coveredconditionals="6" methods="7" coveredmethods="5"/>
+      <file name="baseExceptions.js" path="D:\projects\goodgame\app\http\exceptions\baseExceptions.js">
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="5" count="49" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="49" type="stmt"/>
+        <line num="8" count="49" type="stmt"/>
+        <line num="9" count="49" type="stmt"/>
+        <line num="10" count="49" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+      </file>
+      <file name="httpExceptions.js" path="D:\projects\goodgame\app\http\exceptions\httpExceptions.js">
+        <metrics statements="6" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="11" count="12" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+      </file>
+      <file name="inputValidationException.js" path="D:\projects\goodgame\app\http\exceptions\inputValidationException.js">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="36" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="goodgame.app.http.middlewares">
+      <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="errorHandlingMiddleware.js" path="D:\projects\goodgame\app\http\middlewares\errorHandlingMiddleware.js">
+        <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="151" type="stmt"/>
+        <line num="5" count="151" type="stmt"/>
+        <line num="7" count="15" type="stmt"/>
+        <line num="9" count="15" type="cond" truecount="3" falsecount="0"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="12" count="15" type="stmt"/>
+      </file>
+      <file name="routeNotFoundMiddleware.js" path="D:\projects\goodgame\app\http\middlewares\routeNotFoundMiddleware.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="goodgame.app.modules">
+      <metrics statements="52" coveredstatements="52" conditionals="18" coveredconditionals="18" methods="12" coveredmethods="12"/>
+      <file name="solution-01.js" path="D:\projects\goodgame\app\modules\solution-01.js">
+        <metrics statements="24" coveredstatements="24" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="10" count="126" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="14" count="123" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="18" count="114" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="126" type="stmt"/>
+        <line num="34" count="126" type="stmt"/>
+        <line num="37" count="324" type="stmt"/>
+        <line num="39" count="108" type="stmt"/>
+        <line num="40" count="108" type="stmt"/>
+        <line num="41" count="108" type="stmt"/>
+        <line num="43" count="108" type="stmt"/>
+        <line num="44" count="215" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="214" type="stmt"/>
+        <line num="50" count="214" type="stmt"/>
+        <line num="51" count="214" type="stmt"/>
+        <line num="54" count="108" type="cond" truecount="2" falsecount="0"/>
+        <line num="56" count="103" type="stmt"/>
+        <line num="59" count="108" type="stmt"/>
+      </file>
+      <file name="solution-02.js" path="D:\projects\goodgame\app\modules\solution-02.js">
+        <metrics statements="15" coveredstatements="15" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="10" count="46" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="14" count="43" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="18" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="46" type="stmt"/>
+        <line num="36" count="28" type="stmt"/>
+        <line num="38" count="28" type="stmt"/>
+        <line num="39" count="1101446" type="stmt"/>
+        <line num="42" count="1101446" type="stmt"/>
+        <line num="45" count="28" type="stmt"/>
+      </file>
+      <file name="utilities.js" path="D:\projects\goodgame\app\modules\utilities.js">
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="218" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="218" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="146" type="stmt"/>
+        <line num="28" count="653" type="stmt"/>
+        <line num="29" count="1265" type="stmt"/>
+        <line num="30" count="653" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="92" type="stmt"/>
+      </file>
+    </package>
+    <package name="goodgame.bootstrap">
+      <metrics statements="18" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
+      <file name="index.js" path="D:\projects\goodgame\bootstrap\index.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+      <file name="logging.js" path="D:\projects\goodgame\bootstrap\logging.js">
+        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="routes.js" path="D:\projects\goodgame\bootstrap\routes.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="server.js" path="D:\projects\goodgame\bootstrap\server.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="goodgame.config">
+      <metrics statements="16" coveredstatements="15" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="app.js" path="D:\projects\goodgame\config\app.js">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+      </file>
+      <file name="index.js" path="D:\projects\goodgame\config\index.js">
+        <metrics statements="14" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="12" count="153" type="stmt"/>
+        <line num="13" count="153" type="stmt"/>
+        <line num="15" count="153" type="stmt"/>
+        <line num="16" count="153" type="stmt"/>
+        <line num="17" count="306" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="153" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+      </file>
+      <file name="troops.js" path="D:\projects\goodgame\config\troops.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="goodgame.routes">
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="D:\projects\goodgame\routes\index.js">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="goodgame.routes.api">
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="D:\projects\goodgame\routes\api\index.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+      <file name="troops.js" path="D:\projects\goodgame\routes\api\troops.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
