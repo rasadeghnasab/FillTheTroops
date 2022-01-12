@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.33% </span>
+                <span class="strong">94.44% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/15</span>
+                <span class='fraction'>17/18</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.85% </span>
+                <span class="strong">94.11% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/14</span>
+                <span class='fraction'>16/17</span>
             </div>
         
             
@@ -91,47 +91,59 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">9x</span>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-yes">804x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-yes">536x</span>
+<span class="cline-any cline-yes">536x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-yes">268x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">306x</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-yes">536x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">153x</span>
+<span class="cline-any cline-yes">268x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const normalizedPath = require("path").join(__dirname);
-const files = require("fs").readdirSync(normalizedPath).filter((file) =&gt; file !== 'index.js');
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const loadConfigs = () =&gt; {
+    const normalizedPath = require("path").join(__dirname);
+    const files = require("fs").readdirSync(normalizedPath).filter((file) =&gt; file !== 'index.js');
 &nbsp;
-let configs = {};
+    let configs = {};
 &nbsp;
-files.forEach((config) =&gt; {
-    config = config.replace('.js', '');
-    configs[config] = require(`./${config}`)
-});
+    files.forEach((config) =&gt; {
+        config = config.replace('.js', '');
+        configs[config] = require(`./${config}`)
+    });
 &nbsp;
-function get(path, defaultVal = '') {
+    return configs;
+}
+&nbsp;
+const get = (path, defaultVal = '') =&gt; {
     const parts = path.split('.');
-    let config = configs;
+    let config = loadConfigs();
 &nbsp;
     try {
         for (const configKey of parts) {
@@ -142,7 +154,7 @@ function get(path, defaultVal = '') {
     }
 &nbsp;
     return config;
-}
+};
 &nbsp;
 module.exports = {
     get
@@ -154,7 +166,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Jan 12 2022 17:40:03 GMT+0330 (Iran Standard Time)
+                at Wed Jan 12 2022 18:12:53 GMT+0330 (Iran Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
