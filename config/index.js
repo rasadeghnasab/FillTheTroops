@@ -1,16 +1,20 @@
-const normalizedPath = require("path").join(__dirname);
-const files = require("fs").readdirSync(normalizedPath).filter((file) => file !== 'index.js');
+const loadConfigs = () => {
+    const normalizedPath = require("path").join(__dirname);
+    const files = require("fs").readdirSync(normalizedPath).filter((file) => file !== 'index.js');
 
-let configs = {};
+    let configs = {};
 
-files.forEach((config) => {
-    config = config.replace('.js', '');
-    configs[config] = require(`./${config}`)
-});
+    files.forEach((config) => {
+        config = config.replace('.js', '');
+        configs[config] = require(`./${config}`)
+    });
 
-function get(path, defaultVal = '') {
+    return configs;
+}
+
+const get = (path, defaultVal = '') => {
     const parts = path.split('.');
-    let config = configs;
+    let config = loadConfigs();
 
     try {
         for (const configKey of parts) {
@@ -21,7 +25,7 @@ function get(path, defaultVal = '') {
     }
 
     return config;
-}
+};
 
 module.exports = {
     get

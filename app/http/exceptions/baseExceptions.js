@@ -2,7 +2,6 @@
 
 class applicationError extends Error {
     constructor(message, options) {
-        message = message === '' ? 'Unexpected error happened' : message;
         super(message);
 
         this.name = this.constructor.name;

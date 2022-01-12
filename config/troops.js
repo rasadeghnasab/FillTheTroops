@@ -1,3 +1,4 @@
 module.exports = {
-    types: ['spearmen', 'swordsmen', 'archers']
+    types: ['spearmen', 'swordsmen', 'archers'],
+    defaultSolution: 1,
 }

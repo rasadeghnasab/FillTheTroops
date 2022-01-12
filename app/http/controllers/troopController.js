@@ -3,10 +3,10 @@ const {httpInputValidationError} = require('../exceptions/httpExceptions');
 
 exports.suggest_troops = async function (ctx) {
     const soldiersCount = ctx.request.query.soldiersCount;
-    let chosenSolution = parseInt(ctx.request.query.solution);
-    chosenSolution = chosenSolution === 2 ? chosenSolution : 1;
+    let selectedSolution = parseInt(ctx.request.query.solution);
+    selectedSolution = selectedSolution === 2 ? selectedSolution : ctx.configs.get('troops.defaultSolution');
 
-    const solution = require(`../../modules/solution-0${chosenSolution}`);
+    const solution = require(`../../modules/solution-0${selectedSolution}`);
 
     try {
         ctx.status = 200;

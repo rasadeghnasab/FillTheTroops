@@ -7,8 +7,10 @@
     "prod": "node index.js",
     "dev": "nodemon index.js",
     "test": "jest --forceExit --detectOpenHandles  --maxWorkers=1",
-    "test:watch": "jest --forceExit --detectOpenHandles  --maxWorkers=1 --watch-all --coverage",
-    "test:watch:fast": "jest --forceExit --detectOpenHandles  --maxWorkers=1 --watch --coverage"
+    "test:watch": "npm run test -- --watch-all",
+    "test:watch:fast": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage",
+    "test:badges": "npm run test:coverage && jest-coverage-badges"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "jest": "^27.4.7",
+    "jest-coverage-badges": "^1.1.2",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.15",
     "supertest": "^6.1.6"
@@ -34,5 +37,12 @@
     "koa": "^2.13.4",
     "koa-json": "^2.0.2",
     "winston": "^3.3.3"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
   }
 }
