@@ -1,8 +1,6 @@
 const utilities = require('./utilities');
 const inputValidationException = require("../http/exceptions/inputValidationException");
 
-const troopsTypes = ['spearmen', 'swordsmen', 'archers'];
-
 /**
  * Accepts soldiersCount and validate it against some conditions
  * @param soldiersCount
@@ -26,9 +24,10 @@ function validateInput(soldiersCount) {
  * Time complexity: O(1) (That means if we grow input the execution time won't increase)
  *
  * @param soldiersCount
+ * @param troopsTypes
  * @returns {*}
  */
-module.exports = (soldiersCount) => {
+module.exports = (soldiersCount, troopsTypes) => {
     validateInput(soldiersCount);
 
     // Create an array of size troops types length where
