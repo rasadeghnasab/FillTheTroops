@@ -29,7 +29,7 @@ docker rmi rasadeghnasab/goodgame-nodejs
 
 Note: you need to have npm and node installed to use this method.
 
-```
+```sh
 npm install
 npm run prod
 ```
@@ -40,6 +40,18 @@ Simply return to your terminal and press `ctrl+c` to terminate the process
 ## API documentation
 
 You can find the documentation here: https://documenter.getpostman.com/view/844555/UVXgMxWT
+
+### In case the documentation link doesn't work
+
+You can simply call this URL
+
+```
+http://localhost:8000/api/troops/suggest?soldiersCount=200&solution=1
+```
+
+it needs two parameters:
+- `soldiersCount`: required, integer, should be greater than 3
+- `solution`: optional, integer, [1, 2]
 
 ## Compare solutions:
 
