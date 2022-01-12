@@ -29,7 +29,7 @@ describe("/api/troops/suggest", () => {
                         soldiersCount: expectedSoldiersCount,
                         solution
                     });
-                    const actualSoldiersCount = Object.values(response.body).reduce((a, b) => a + b, 0)
+                    const actualSoldiersCount = Object.values(response.body.data).reduce((a, b) => a + b, 0)
 
                     expect(expectedSoldiersCount).toEqual(actualSoldiersCount);
                 }
@@ -45,7 +45,7 @@ describe("/api/troops/suggest", () => {
                         soldiersCount: expectedSoldiersCount,
                         solution
                     });
-                    results.push(JSON.stringify(response.body));
+                    results.push(JSON.stringify(response.body.data));
                 }
 
                 // if there is no duplicate the result array should have 100 elements after executing the _.uniq function

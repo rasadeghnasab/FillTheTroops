@@ -10,7 +10,10 @@ exports.suggest_troops = async function (ctx) {
 
     try {
         ctx.status = 200;
-        ctx.body = solution(soldiersCount, ctx.configs.get('troops.types'));
+        ctx.body = {
+            data: solution(soldiersCount, ctx.configs.get('troops.types')),
+            statusCode: 200
+        };
     } catch (error) {
         if (error instanceof inputValidationException) {
             throw new httpInputValidationError(error.message);
