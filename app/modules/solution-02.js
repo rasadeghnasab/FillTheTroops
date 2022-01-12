@@ -4,8 +4,9 @@ const inputValidationException = require("../http/exceptions/inputValidationExce
 /**
  * Accepts soldiersCount and validate it against some conditions
  * @param soldiersCount
+ * @param troopsTypes
  */
-function validateInput(soldiersCount) {
+function validateInput(soldiersCount, troopsTypes) {
     if (soldiersCount != parseInt(soldiersCount)) {
         throw new inputValidationException('soldiersCount should be an integer');
     }
@@ -28,7 +29,7 @@ function validateInput(soldiersCount) {
  * @returns {*}
  */
 module.exports = (soldiersCount, troopsTypes) => {
-    validateInput(soldiersCount);
+    validateInput(soldiersCount, troopsTypes);
 
     // Create an array of size troops types length where
     // every troop has at least one member
